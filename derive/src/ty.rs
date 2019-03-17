@@ -57,16 +57,16 @@ pub(crate) fn build_ty(
             // let field_flags = flags | decode_flags(&field.attrs);
 
             encode.push(quote!{
-                crate::delta_encode::bitio::DeltaEncodable::encode(&#name_self, None, w)?;
+                crate::delta_encode::DeltaEncodable::encode(&#name_self, None, w)?;
             });
             encode_part.push(quote!{
-                crate::delta_encode::bitio::DeltaEncodable::encode(&#name_self, Some(&#name_base), w)?;
+                crate::delta_encode::DeltaEncodable::encode(&#name_self, Some(&#name_base), w)?;
             });
             decode.push(quote!{
-                #de_target crate::delta_encode::bitio::DeltaEncodable::decode(None, r)?
+                #de_target crate::delta_encode::DeltaEncodable::decode(None, r)?
             });
             decode_part.push(quote!{
-                #de_target crate::delta_encode::bitio::DeltaEncodable::decode(Some(&#name_base), r)?
+                #de_target crate::delta_encode::DeltaEncodable::decode(Some(&#name_base), r)?
             });
         },
         syn::Type::Array(syn::TypeArray{elem: sub_ty, ..}) => {

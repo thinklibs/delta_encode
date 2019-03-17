@@ -5,11 +5,11 @@ authors = ["Matthew Collins <me@thinkof.name>"]
 edition = "2018"
 
 [features]
-cgmath = ["think_bitio/cgmath"]
 
 [dependencies]
 delta_encode_derive = { path = "./derive" }
-think_bitio = { git = "https://github.com/thinklibs/think_bitio.git", rev = "77ccfa03a38045593eaafc4ad93273704dd249ff" }
+think_bitio = { git = "https://github.com/thinklibs/think_bitio.git", rev = "d91ec1eeec085a2f20280fa50f98cd767c0e7680" }
+cgmath = { version = "0.17.0", optional = true }
 
 [workspace]
 members = [

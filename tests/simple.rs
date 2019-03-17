@@ -2,7 +2,8 @@
 #[macro_use]
 extern crate delta_encode;
 
-use delta_encode::bitio::{self, DeltaEncodable};
+use delta_encode::DeltaEncodable;
+use delta_encode::bitio;
 
 #[test]
 fn test_enum() {

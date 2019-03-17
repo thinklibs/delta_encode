@@ -75,7 +75,7 @@ fn delta_encode_impl(ast: syn::DeriveInput) -> TokenStream {
 
     quote! {
         #[allow(unused_variables, non_snake_case, unreachable_patterns, clippy::float_cmp)]
-        impl crate::delta_encode::bitio::DeltaEncodable for #name {
+        impl crate::delta_encode::DeltaEncodable for #name {
             #[inline]
             fn encode<W>(&self, base: Option<&Self>, w: &mut crate::delta_encode::bitio::Writer<W>) -> ::std::io::Result<()>
                 where W: std::io::Write
