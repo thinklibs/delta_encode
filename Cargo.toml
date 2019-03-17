@@ -1,0 +1,14 @@
+[package]
+name = "delta_encode"
+version = "0.1.0"
+authors = ["Matthew Collins <me@thinkof.name>"]
+edition = "2018"
+
+[dependencies]
+delta_encode_derive = { path = "./derive" }
+think_bitio = { git = "https://github.com/thinklibs/think_bitio.git" }
+
+[workspace]
+members = [
+    "./derive"
+]
