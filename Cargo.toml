@@ -6,7 +6,7 @@ edition = "2018"
 
 [dependencies]
 delta_encode_derive = { path = "./derive" }
-think_bitio = { git = "https://github.com/thinklibs/think_bitio.git" }
+think_bitio = { git = "https://github.com/thinklibs/think_bitio.git", rev = "7686b81f08c59a9f18f2a2fa3d7e0e08302c4632" }
 
 [workspace]
 members = [
